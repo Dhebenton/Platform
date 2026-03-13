@@ -4,6 +4,7 @@
 
      --fontwmultiplier: 1.0;
 
+     --w600: 'wght' calc(600 * var(--fontwmultiplier));
      --w570: 'wght' calc(570 * var(--fontwmultiplier));
      --w540: 'wght' calc(540 * var(--fontwmultiplier));
 }

@@ -1,4 +1,4 @@
-import { AnalyticsIcon, MobinaIcon, OverviewIcon, VisibilityIcons } from "../../../assets/Icons";
+import { AnalyticsIcon, MobinaIcon, OverviewIcon, PerfromanceIcon, SplitTestingIcon, VisibilityIcons, ContentAndAssets, ModulesHub, LogIcon, SecurityIcon, InfrastructureIcon } from "../../../assets/Icons";
 
 
 export default function Tabs({}) {
@@ -24,33 +24,33 @@ export default function Tabs({}) {
 
                <span className="nav-tab-group-h font12">Workspace</span>
                <button className="tab not-ready font13 g10">
-                    <OverviewIcon />
+                    <PerfromanceIcon />
                     <p>Performance</p>
                </button>
                <button className="tab not-ready font13 g10">
-                    <MobinaIcon />
+                    <SplitTestingIcon />
                     <p>Split Testing</p>
                </button>
                <button className="tab not-ready font13 g10">
-                    <OverviewIcon />
+                    <ContentAndAssets />
                     <p>Content & Assets</p>
                </button>
                <button className="tab not-ready font13 g10">
-                    <MobinaIcon />
+                    <ModulesHub />
                     <p>Modules Hub</p>
                </button>
 
                <span className="nav-tab-group-h font12">Management</span>
                <button className="tab not-ready font13 g10">
-                    <OverviewIcon />
+                    <InfrastructureIcon />
                     <p>Infrastructure</p>
                </button>
                <button className="tab not-ready font13 g10">
-                    <MobinaIcon />
+                    <SecurityIcon />
                     <p>Access & Security</p>
                </button>
                <button className="tab not-ready font13 g10">
-                    <OverviewIcon />
+                    <LogIcon />
                     <p>System Activity</p>
                </button>
           </>
