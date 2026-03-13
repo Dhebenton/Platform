@@ -1,0 +1,49 @@
+:root {
+     --g18: 18px;
+     --g12: 12px;
+     --g10: 10px;
+     --g8: 8px;
+     --g5: 5px;
+
+     --br7: 7px;
+}
+
+.f-col {
+     display: flex;
+     flex-direction: column;
+}
+
+.f-row {
+     display: flex;
+     align-items: center;
+}
+
+.g10 {
+     gap: var(--g10);
+}
+
+.g8 {
+     gap: var(--g8);
+}
+
+.g5 {
+     gap: var(--g5);
+}
+
+.margin-top-auto {
+     margin-top: auto;
+}
+
+@media (max-width: 1340px) {
+     :root {
+          --multiplier: .93;
+
+          --g18: calc(18px * var(--multiplier));
+          --g12: calc(12px * var(--multiplier));
+          --g10: calc(10px * var(--multiplier));
+          --g8: calc(8px * var(--multiplier));
+          --g5: calc(5px * var(--multiplier));
+
+          --br7: 7px;
+     }
+}

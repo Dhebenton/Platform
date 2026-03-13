@@ -1,0 +1,79 @@
+@font-face {
+     font-family: 'PPNeueMontreal';
+     src: url('/PPNeueMontreal.woff2') format('woff2');
+     font-weight: 100 900;
+     font-style: normal;
+     font-display: swap;
+}
+
+* {
+     box-sizing: border-box;
+     padding: 0;
+     font-family: "PPNeueMontreal" !important;
+     margin: 0;
+     letter-spacing: .02em;
+     line-height: 1;
+}
+
+body {
+     height: 100%;
+     -webkit-font-smoothing: antialiased;
+     -moz-osx-font-smoothing: grayscale;
+     text-rendering: optimizeLegibility;
+     font-kerning: normal;
+     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+     font-optical-sizing: auto;
+     font-family: 'PPNeueMontreal';
+     background-color: white;
+     font-variant-ligatures: common-ligatures;
+     letter-spacing: .025sem;
+     font-synthesis: none;
+}
+
+p {
+     text-wrap: pretty;
+}
+
+button img,
+a img,
+.not-ready,
+input,
+a svg,
+button svg,
+input::placeholder,
+a,
+button,
+.tra {
+  transition: all .2s cubic-bezier(0.18, 0.06, 0.22, 1);
+}
+
+.not-ready {
+  position: relative;
+  cursor: default;
+}
+
+.not-ready:hover > * {
+  filter: blur(1px);
+}
+
+.not-ready::after {
+  display: block;
+  opacity: 0;
+  content: "Not Ready";
+  position: absolute;
+  top: 50%;
+  transition: inherit;
+  left: 50%;
+  font-size: var(--font13);
+  transform: translate(-50%, -50%);
+  filter: none;
+  background-color: var(--t800);
+  color: white;
+     border-radius: 5px;
+     padding: 6px;
+  z-index: 10;
+}
+
+.not-ready:hover::after {
+     opacity: 1;
+}

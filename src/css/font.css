@@ -1,0 +1,33 @@
+:root {
+     --font13: 13px;
+     --font12: 12px;
+
+     --fontwmultiplier: 1.0;
+
+     --w570: 'wght' calc(570 * var(--fontwmultiplier));
+     --w540: 'wght' calc(540 * var(--fontwmultiplier));
+}
+
+.font13 {
+     font-size: var(--font13);
+}
+
+.font12 {
+     font-size: var(--font12);
+}
+
+.w570 {
+     font-variation-settings: var(--w570);
+}
+
+.w540 {
+     font-variation-settings: var(--w540);
+}
+
+
+@media (max-width: 1340px) {
+     :root {
+          --font13: 12px;
+          --font12: 11px;
+     }
+}
