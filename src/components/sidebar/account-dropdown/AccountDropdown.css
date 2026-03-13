@@ -8,6 +8,7 @@
 
 .account-dropdown-toggle img {
      height: 21px;
+     object-fit: cover;
      border-radius: 50px;
      opacity: .95;
 }
@@ -22,7 +23,7 @@
 }
 
 .account-dropdown-toggle:hover {
-     background-color: #F2F2F2;
+     background-color: #F0F0F0;
      color: var(--t700);
 }
 
@@ -43,6 +44,7 @@
      .account-dropdown-toggle img {
           height: 19px;
      }
+
 
      .account-dropdown-toggle svg {
           height: 9px;

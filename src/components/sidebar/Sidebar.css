@@ -33,12 +33,12 @@ nav {
 }
 
 .tab:hover {
-     background-color: #F2F2F2;
+     background-color: #F0F0F0;
      color: var(--t700);
 }
 
 .tab.active {
-     background-color: #F0F0F0;
+     background-color: #EDEDED;
      font-variation-settings: var(--w600);
      color: var(--t900);
 }

@@ -22,7 +22,7 @@ export default function Tabs({}) {
                     <p>Visibility</p>
                </button>
 
-               <span className="nav-tab-group-h font12">Workspace</span>
+               <span className="nav-tab-group-h font12">Tools</span>
                <button className="tab not-ready font13 g10">
                     <PerfromanceIcon />
                     <p>Performance</p>
