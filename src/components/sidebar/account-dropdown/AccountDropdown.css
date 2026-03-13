@@ -8,6 +8,7 @@
 
 .account-dropdown-toggle img {
      height: 21px;
+     width: 21px;
      object-fit: cover;
      border-radius: 50px;
      opacity: .95;
