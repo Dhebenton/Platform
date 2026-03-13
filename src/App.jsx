@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react'
 import { supabase } from './lib/supabase'
 import Sidebar from './components/sidebar/Sidebar'
 import './css/font.css'
-import './app.css'
+import './App.css'
 import './css/flex.css'
 
 
