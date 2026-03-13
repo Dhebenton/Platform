@@ -4,6 +4,7 @@ import Sidebar from './components/sidebar/Sidebar'
 import './css/font.css'
 import './App.css'
 import './css/flex.css'
+import Topbar from './components/topbar/Topbar'
 
 
 function App() {
@@ -43,7 +44,9 @@ function App() {
   return (
     <>
       <Sidebar />
-      <main></main>
+      <main className='flex'>
+          <Topbar />
+      </main>
     </>
   )
 }

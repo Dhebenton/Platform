@@ -1,0 +1,62 @@
+/*   TOPBAR   */
+
+header {
+     padding: var(--g22) var(--main-padding); 
+}
+
+header h1 {
+     color: var(--t900);
+}
+
+/* TODO: ORGANISE BELOW */
+
+#root {
+     display: flex;
+     height: 100%;
+}
+
+html,
+body {
+     height: 100vh;
+}
+
+body {
+     background-color: white;
+}
+
+:root {
+     --background-secondary: #FAFAFA;
+
+     --stroke-primary: #E8E8E8;
+
+     --tblack: #020203;
+
+     --t900: #141415;
+     --t800: #2A2A2C;
+     --t700: #444446;
+     --t600: #5A5A5C;
+     --t450: #878787;
+     --t400: #9C9C9C;
+     --t350: #A6A6A6;
+     --t300: #B5B5B5;
+     --t200: #C7C7C7;
+
+     --font16: 16px;
+
+     --main-padding: 72px;
+     --g22: 22px;
+}
+
+.font16 {
+     font-size: var(--font16);
+}
+
+main {
+     flex: 1;
+}
+
+button {
+     background-color: transparent;
+     cursor: pointer;
+     border: none;
+}
