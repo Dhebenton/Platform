@@ -38,7 +38,7 @@ function App() {
   if (loading) return null
 
   if (!session) {
-    window.location.href = 'http://localhost:5174'
+    window.location.href = 'https://auth.hypeify.io'
     return null
   }
 
