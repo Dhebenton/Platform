@@ -19,6 +19,14 @@
      color: var(--t450);
 }
 
+@media (max-width: 1340px) {
+     /*   CHART   */
+
+     .kpi-card-metric {
+          font-size: 17px;
+     }
+}
+
 
 /* TODO: ORGANISE BELOW */
 
