@@ -5,6 +5,7 @@ import './css/font.css'
 import './App.css'
 import './css/flex.css'
 import Topbar from './components/topbar/Topbar'
+import AnalyticsOverview from './components/screens/analytics/overview/components/AnalyticsOverview'
 
 
 function App() {
@@ -46,6 +47,7 @@ function App() {
       <Sidebar />
       <main className='flex'>
           <Topbar />
+          <AnalyticsOverview />
       </main>
     </>
   )

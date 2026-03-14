@@ -1,6 +1,4 @@
 .account-dropdown-toggle {
-
-
      padding: 0 var(--g8);
      height: 32px;
      color: var(--t400);
@@ -16,6 +14,7 @@
 
 .account-dropdown-toggle p {
      margin-right: auto;
+     white-space: nowrap;
 }
 
 .account-dropdown-toggle svg {

@@ -1,10 +1,18 @@
 :root {
+     --g28: 28px;
+     --g22: 22px;
+     --g20: 20px;
      --g18: 18px;
+     --g16: 16px;
+     --g14: 14px;
      --g12: 12px;
      --g10: 10px;
      --g8: 8px;
+     --g6: 6px;
      --g5: 5px;
 
+     --br14: 14px;
+     --br12: 12px;
      --br7: 7px;
 }
 
@@ -18,12 +26,32 @@
      align-items: center;
 }
 
+.flex {
+     flex: 1;
+}
+
+.g28 {
+     gap: var(--g28);
+}
+
+.g20 {
+     gap: var(--g20);
+}
+
+.g14 {
+     gap: var(--g14);
+}
+
 .g10 {
      gap: var(--g10);
 }
 
 .g8 {
      gap: var(--g8);
+}
+
+.g6 {
+     gap: var(--g6);
 }
 
 .g5 {
@@ -38,12 +66,20 @@
      :root {
           --multiplier: .93;
 
+          --g28: calc(28px * var(--multiplier));
+          --g22: calc(22px * var(--multiplier));
+          --g20: calc(20px * var(--multiplier));
           --g18: calc(18px * var(--multiplier));
+          --g16: calc(16px * var(--multiplier));
+          --g14: calc(14px * var(--multiplier));
           --g12: calc(12px * var(--multiplier));
           --g10: calc(10px * var(--multiplier));
           --g8: calc(8px * var(--multiplier));
+          --g6: calc(6px * var(--multiplier));
           --g5: calc(5px * var(--multiplier));
 
-          --br7: 7px;
+          --br14: 12px;
+          --br12: 10px;
+          --br7: 6px;
      }
 }

@@ -4,8 +4,10 @@ import { AnalyticsIcon, MobinaIcon, OverviewIcon, PerfromanceIcon, SplitTestingI
 export default function Tabs({}) {
      return (
           <>
-               <span className="nav-tab-group-h font12">Workspace</span>
-               <button className="tab not-ready font13 active g10">
+               <span className="nav-tab-group-h be-rel">
+                    <p className="font12 w570">Workspace</p>
+               </span>
+               <button className="tab not-ready font13 g10">
                     <OverviewIcon />
                     <p>Overview</p>
                </button>
@@ -13,7 +15,7 @@ export default function Tabs({}) {
                     <MobinaIcon />
                     <p>Mobina</p>
                </button>
-               <button className="tab not-ready font13 g10">
+               <button className="tab active font13 g10">
                     <AnalyticsIcon />
                     <p>Analytics</p>
                </button>
@@ -22,7 +24,9 @@ export default function Tabs({}) {
                     <p>Visibility</p>
                </button>
 
-               <span className="nav-tab-group-h font12">Tools</span>
+               <span className="nav-tab-group-h be-rel">
+                    <p className="font12 w570">Tools</p>
+               </span>
                <button className="tab not-ready font13 g10">
                     <PerfromanceIcon />
                     <p>Performance</p>
@@ -40,7 +44,9 @@ export default function Tabs({}) {
                     <p>Modules Hub</p>
                </button>
 
-               <span className="nav-tab-group-h font12">Management</span>
+               <span className="nav-tab-group-h be-rel">
+                    <p className="font12 w570">Management</p>
+               </span>
                <button className="tab not-ready font13 g10">
                     <InfrastructureIcon />
                     <p>Infrastructure</p>

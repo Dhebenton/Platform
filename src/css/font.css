@@ -1,20 +1,73 @@
 :root {
+     --font17: 17px;
+     --font16: 16px;
+     --font15: 15px;
+     --font14: 14px;
      --font13: 13px;
      --font12: 12px;
 
      --fontwmultiplier: 1.0;
 
+     --w700: 'wght' calc(700 * var(--fontwmultiplier));
+     --w680: 'wght' calc(680 * var(--fontwmultiplier));
+     --w660: 'wght' calc(660 * var(--fontwmultiplier));
+     --w640: 'wght' calc(640 * var(--fontwmultiplier));
+     --w620: 'wght' calc(620 * var(--fontwmultiplier));
      --w600: 'wght' calc(600 * var(--fontwmultiplier));
+     --w590: 'wght' calc(590 * var(--fontwmultiplier));
      --w570: 'wght' calc(570 * var(--fontwmultiplier));
      --w540: 'wght' calc(540 * var(--fontwmultiplier));
+     --w520: 'wght' calc(520 * var(--fontwmultiplier));
+}
+
+.font17 {
+     font-size: var(--font17);
+}
+
+.font16 {
+     font-size: var(--font16);
+}
+
+.font15 {
+     font-size: var(--font15);
+}
+
+.font14 {
+     font-size: var(--font14);
 }
 
 .font13 {
      font-size: var(--font13);
+     letter-spacing: .03em !important;
 }
 
 .font12 {
+     letter-spacing: .03em !important;
      font-size: var(--font12);
+}
+
+.w700 {
+     font-variation-settings: var(--w700);
+}
+
+.w680 {
+     font-variation-settings: var(--w680);
+}
+
+.w660 {
+     font-variation-settings: var(--w660);
+}
+
+.w640 {
+     font-variation-settings: var(--w640);
+}
+
+.w620 {
+     font-variation-settings: var(--w620);
+}
+
+.w590 {
+     font-variation-settings: var(--w590);
 }
 
 .w570 {
@@ -25,9 +78,33 @@
      font-variation-settings: var(--w540);
 }
 
+.w520 {
+     font-variation-settings: var(--w520);
+}
+
+.lh15 {
+     line-height: 1.5;
+}
+
+
+.lh14 {
+     line-height: 1.4;
+}
+
+.lh13 {
+     line-height: 1.3;
+}
+
+.lh12 {
+     line-height: 1.2;
+}
 
 @media (max-width: 1340px) {
      :root {
+          --font17: 16px;
+          --font16: 15px;
+          --font15: 14px;
+          --font14: 13px;
           --font13: 12px;
           --font12: 11px;
      }
