@@ -6,7 +6,7 @@ export const MetricCharts = ({ score = 93 }) => {
   const [isLarge, setIsLarge] = useState(window.innerWidth >= 1340);
 
   const size = isLarge ? 64 : 58;
-  const strokeWidth = isLarge ? 8 : 6;
+  const strokeWidth = isLarge ? 7.5 : 6;
   const radius = 36;
   const circumference = 2 * Math.PI * radius;
 

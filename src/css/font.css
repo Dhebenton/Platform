@@ -18,6 +18,7 @@
      --w570: 'wght' calc(570 * var(--fontwmultiplier));
      --w540: 'wght' calc(540 * var(--fontwmultiplier));
      --w520: 'wght' calc(520 * var(--fontwmultiplier));
+     --w480: 'wght' calc(480 * var(--fontwmultiplier));
 }
 
 .font17 {

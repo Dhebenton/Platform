@@ -9,7 +9,7 @@ export default function KPICard({label, score, heading, subheading }) {
                     <MetricCharts score={score}/>
                     <div className="f-col g6">
                          <h3 className="font14 w660 heading ln12">{heading}</h3>
-                         <p className='font13 twoliner w540 subheading lh13'>{subheading}</p>
+                         <p className='font13 twoliner w540 subheading lh14'>{subheading}</p>
                     </div>
                </div>
           </div>
