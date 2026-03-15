@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect , lazy, Suspense} from 'react'
+import { Routes, Route } from 'react-router-dom'
 import { supabase } from './lib/supabase'
 import Sidebar from './components/sidebar/Sidebar'
-import './css/font.css'
-import './App.css'
-import './css/flex.css'
 import Topbar from './components/topbar/Topbar'
 import AnalyticsOverview from './components/screens/analytics/overview/components/AnalyticsOverview'
-
+import './css/font.css'
+import './css/flex.css'
+import './App.css'
 
 function App() {
   const [session, setSession] = useState(null)
@@ -34,33 +34,43 @@ function App() {
       setSession(session)
     })
   }, [])
-  
 
   useEffect(() => {
-  if (loading || !session) return  // main isn't rendered yet
+    if (loading || !session) return
 
-  const main = document.querySelector('main')
-  if (!main) return
+    const main = document.querySelector('main')
+    if (!main) return
 
-  const handleScroll = () => {
-    const header = document.querySelector('header')
-    if (!header) return
-    header.classList.toggle('scrolled', main.scrollTop > 0)
+    const handleScroll = () => {
+      const header = document.querySelector('header')
+      if (!header) return
+      header.classList.toggle('scrolled', main.scrollTop > 0)
+    }
+
+    main.addEventListener('scroll', handleScroll)
+    return () => main.removeEventListener('scroll', handleScroll)
+  }, [loading, session])
+
+  if (loading) return null
+
+  if (!session) {
+    window.location.href = 'https://auth.hypeify.io'
+    return null
   }
 
-  main.addEventListener('scroll', handleScroll)
-  return () => main.removeEventListener('scroll', handleScroll)
-}, [loading, session])  // 👈 re-runs when these change
-
   return (
-    <>
-      <Sidebar />
-      <main className='flex'>
+     <>
+          <Sidebar />
+          <main className='flex'>
           <Topbar />
-          <AnalyticsOverview />
-      </main>
-    </>
-  )
+          <Suspense fallback={null}>
+               <Routes>
+               <Route path='/analytics' element={<AnalyticsOverview />} />
+               </Routes>
+          </Suspense>
+          </main>
+     </>
+     )
 }
 
 export default App

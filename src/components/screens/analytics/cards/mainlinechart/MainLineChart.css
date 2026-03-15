@@ -340,3 +340,7 @@ main {
      overflow-y: scroll;
      scrollbar-width: none;
 }
+
+a {
+     text-decoration: none;
+}
