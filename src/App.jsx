@@ -1,4 +1,4 @@
-import { useState, useEffect , lazy, Suspense} from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { supabase } from './lib/supabase'
 import Sidebar from './components/sidebar/Sidebar'
@@ -37,16 +37,13 @@ function App() {
 
   useEffect(() => {
     if (loading || !session) return
-
     const main = document.querySelector('main')
     if (!main) return
-
     const handleScroll = () => {
       const header = document.querySelector('header')
       if (!header) return
       header.classList.toggle('scrolled', main.scrollTop > 0)
     }
-
     main.addEventListener('scroll', handleScroll)
     return () => main.removeEventListener('scroll', handleScroll)
   }, [loading, session])
@@ -59,18 +56,22 @@ function App() {
   }
 
   return (
-     <>
-          <Sidebar />
-          <main className='flex'>
-          <Topbar />
-          <Suspense fallback={null}>
-               <Routes>
-               <Route path='/analytics' element={<AnalyticsOverview />} />
-               </Routes>
-          </Suspense>
-          </main>
-     </>
-     )
+    <>
+      <Sidebar />
+      <main className='flex'>
+        <Topbar />
+        <Suspense fallback={null}>
+          <Routes>
+            {/* Scoped to org + site — siteId flows into all child components */}
+            <Route path='/:orgId/:siteId/analytics' element={<AnalyticsOverview />} />
+
+            {/* Fallback — redirect to a default or show site picker later */}
+            <Route path='*' element={<AnalyticsOverview />} />
+          </Routes>
+        </Suspense>
+      </main>
+    </>
+  )
 }
 
 export default App
