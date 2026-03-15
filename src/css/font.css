@@ -1,4 +1,5 @@
 :root {
+     --font20: 20px;
      --font17: 17px;
      --font16: 16px;
      --font15: 15px;
@@ -15,8 +16,10 @@
      --w620: 'wght' calc(620 * var(--fontwmultiplier));
      --w600: 'wght' calc(600 * var(--fontwmultiplier));
      --w590: 'wght' calc(590 * var(--fontwmultiplier));
+     --w580: 'wght' calc(580 * var(--fontwmultiplier));
      --w570: 'wght' calc(570 * var(--fontwmultiplier));
      --w540: 'wght' calc(540 * var(--fontwmultiplier));
+     --w560: 'wght' calc(560 * var(--fontwmultiplier));
      --w520: 'wght' calc(520 * var(--fontwmultiplier));
      --w480: 'wght' calc(480 * var(--fontwmultiplier));
 }
@@ -71,13 +74,11 @@
      font-variation-settings: var(--w590);
 }
 
-.w570 {
-     font-variation-settings: var(--w570);
-}
+.w570 { font-variation-settings: var(--w570);}
 
-.w540 {
-     font-variation-settings: var(--w540);
-}
+.w560 { font-variation-settings: var(--w560);}
+
+.w540 { font-variation-settings: var(--w540);}
 
 .w520 {
      font-variation-settings: var(--w520);
@@ -117,6 +118,7 @@
 
 @media (max-width: 1340px) {
      :root {
+          --font20: 18px;
           --font17: 16px;
           --font16: 15px;
           --font15: 14px;

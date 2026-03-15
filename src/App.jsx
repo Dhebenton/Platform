@@ -34,13 +34,23 @@ function App() {
       setSession(session)
     })
   }, [])
+  
 
-  if (loading) return null
+  useEffect(() => {
+  if (loading || !session) return  // main isn't rendered yet
 
-  if (!session) {
-    window.location.href = 'https://auth.hypeify.io'
-    return null
+  const main = document.querySelector('main')
+  if (!main) return
+
+  const handleScroll = () => {
+    const header = document.querySelector('header')
+    if (!header) return
+    header.classList.toggle('scrolled', main.scrollTop > 0)
   }
+
+  main.addEventListener('scroll', handleScroll)
+  return () => main.removeEventListener('scroll', handleScroll)
+}, [loading, session])  // 👈 re-runs when these change
 
   return (
     <>

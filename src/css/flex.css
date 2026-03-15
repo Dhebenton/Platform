@@ -1,5 +1,13 @@
 :root {
+     --g64: 64px;
+     --g42: 42px;
+     --g38: 38px;
+     --g36: 36px;
+     --g34: 34px;
+     --g30: 30px;
      --g28: 28px;
+     --g26: 26px;
+     --g24: 24px;
      --g22: 22px;
      --g20: 20px;
      --g18: 18px;
@@ -9,6 +17,7 @@
      --g10: 10px;
      --g8: 8px;
      --g6: 6px;
+     --g4: 4px;
      --g5: 5px;
 
      --br14: 14px;
@@ -66,7 +75,15 @@
      :root {
           --multiplier: .93;
 
+          --g64: calc(64px * var(--multiplier));
+          --g42: calc(42px * var(--multiplier));
+          --g38: calc(38px * var(--multiplier));
+          --g36: calc(36px * var(--multiplier));
+          --g34: calc(34px * var(--multiplier));
+          --g30: calc(30px * var(--multiplier));
           --g28: calc(28px * var(--multiplier));
+          --g26: calc(26px * var(--multiplier));
+          --g24: calc(24px * var(--multiplier));
           --g22: calc(22px * var(--multiplier));
           --g20: calc(20px * var(--multiplier));
           --g18: calc(18px * var(--multiplier));
@@ -77,6 +94,7 @@
           --g8: calc(8px * var(--multiplier));
           --g6: calc(6px * var(--multiplier));
           --g5: calc(5px * var(--multiplier));
+          --g4: calc(4px * var(--multiplier));
 
           --br14: 12px;
           --br12: 10px;

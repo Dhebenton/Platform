@@ -1,11 +1,18 @@
 /*   TOPBAR   */
 
 header {
+     position: sticky;
+     transition: all .4s var(--motion-ease);
+     top: 0;
+     background-color: hsl(0, 0%, 100%, .8);
+     z-index: 1000;
+     backdrop-filter: blur(8px);
      padding: var(--g22) var(--main-padding); 
 }
 
 header h1 {
      color: var(--t900);
+     transition: inherit;
 }
 
 /*   TABS   */
@@ -53,4 +60,12 @@ header h1 {
      width: 59px;
 }
 
+/*   SCROLLED   */
 
+header.scrolled {
+     padding: var(--g16) calc(var(--main-padding) / 2);
+}
+
+header.scrolled h1 {
+     font-size: var(--font15) !important;
+}
