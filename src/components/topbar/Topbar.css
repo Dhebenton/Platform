@@ -60,6 +60,12 @@ header h1 {
      width: 59px;
 }
 
+.topbar-tabs-wrap.visibility.content::before {
+     width: 50px;
+     left: 279px;
+} 
+
+
 /*   SCROLLED   */
 
 header.scrolled {

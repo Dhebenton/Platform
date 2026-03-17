@@ -7,6 +7,7 @@ import AnalyticsOverview from './components/screens/analytics/overview/component
 import './css/font.css'
 import './css/flex.css'
 import './App.css'
+import ContentScreen from './components/screens/visibility/content/ContentScreen'
 
 function App() {
   const [session, setSession] = useState(null)
@@ -64,6 +65,8 @@ function App() {
           <Routes>
             {/* Scoped to org + site — siteId flows into all child components */}
             <Route path='/:orgId/:siteId/analytics' element={<AnalyticsOverview />} />
+
+            <Route path='/visibility' element={<ContentScreen />} />
 
             {/* Fallback — redirect to a default or show site picker later */}
             <Route path='*' element={<AnalyticsOverview />} />
