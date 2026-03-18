@@ -7,17 +7,23 @@
 .bar-chart-list-wrap {
 
      .list-row {
+          display: grid;
           cursor: pointer;
+          grid-template-columns: 1fr auto;
      }
      .bar {
           background-color: #F0F0F0;
           border-radius: var(--br7);
           color: var(--t500);
           height: 29px;
-          padding: 0 var(--g10);
+          padding: 0 var(--g8);
      }
 
-     .bar span {
+     .list-row:hover .bar {
+          background-color: #D9D9D9;
+     }
+
+.bar span {
           color: var(--t600);
           transition: inherit;
      }
@@ -25,12 +31,16 @@
      .bar svg {
           height: 12.5px;
           width: 12.5px;
+          min-width: 12.5px;
      }
 
+     .bar img {
+          object-fit: cover;
+     }
      
 
      .bar-chart-metric-wrap {
-          width: var(--g80);
+          width: var(--g72);
      }
 
      .percentage-wrap {
@@ -46,6 +56,15 @@
 
      .bar span{
           color: var(--t700);
+     }
+}
+
+@media (max-width: 1440px) {
+     .bav img,
+     .bar svg {
+          height: 11.5px;
+          width: 11.5px;
+          min-width: 11.5px;
      }
 }
 
@@ -77,6 +96,7 @@
 
      --g36: 36px; 
      --g11: 11px;
+     --g72: 72px;
      --g24: 24px;
      --g80: 80px;
      --g60: 60px;
@@ -135,4 +155,8 @@
 
 .text-micro {
      font-size: var(--text-micro);
+}
+
+.a-s {
+     align-items: stretch;
 }

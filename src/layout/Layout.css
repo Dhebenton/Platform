@@ -1,6 +1,6 @@
 :root {
      --main-padding: 72px;
-     --main-padding-small: calc((100% - 1100px) / 2)
+     --main-padding-small: calc((100% - 1000px) / 2)
 }
 
 main {
@@ -18,7 +18,7 @@ section.small-padding {
 }
 
 .small-padding-horizontal {
-     width: 1100px;
+     width: 1000px;
 }
 
 @media (max-width: 1440px) {
