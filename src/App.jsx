@@ -6,7 +6,7 @@ import "./App.css";
 import Layout from "./layout/Layout";
 
 import './css/Colors.css'
-import './css/Flex.css'
+import './css/flex.css'
 import './css/Fonts.css'
 import './css/Cards.css'
 
