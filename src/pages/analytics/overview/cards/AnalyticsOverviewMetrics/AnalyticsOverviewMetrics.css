@@ -1,0 +1,67 @@
+/*   METRICS TAB   */
+
+.analytics-overview-metrics-wrap {
+     .metrics-tab {
+          text-align: left;
+          padding: var(--g12) var(--g20);
+          border-radius: var(--br7);
+     }
+
+     .metrics-tab .change {
+          padding-top: 2px;
+     }
+
+     .metrics-tab:hover {
+          background-color: #F2F2F2;
+     }
+
+     .metrics-tab:hover .label {
+          color: var(--t700);
+     }
+}
+
+.main-chart {
+     svg {
+          overflow: visible;
+     }
+
+     svg text {
+          font-variation-settings: 'wght' 540;
+          letter-spacing: .02em;
+     }
+
+     .dots {
+          transform: translateY(4px);
+     }
+
+     .axis-point {
+          font-variation-settings: 'wght' 520;
+          fill: hsl(0, 0%, 68%);
+     }
+}
+
+/*  TODO: ORGANISE   */
+
+.g12 { gap: var(--g12);}
+.g11 { gap: var(--g11); }
+.g36 { gap: var(--g36);}
+
+:root {
+     --red: #DC2626;
+     --blue: #0099FF;
+
+     --g36: 36px; 
+     --g11: 11px;
+}
+
+.metrics-tab .change {
+     color: var(--t300);
+}
+
+.change.positive {
+     color: var(--green);
+}
+
+.change.negative {
+     color: var(--red);
+}

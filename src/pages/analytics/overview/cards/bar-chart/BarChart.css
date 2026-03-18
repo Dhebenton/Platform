@@ -1,0 +1,138 @@
+/*   BAR CHART   */
+
+.bar-chart-card {
+     padding: var(--g16) var(--g18);
+}
+
+.bar-chart-list-wrap {
+
+     .list-row {
+          cursor: pointer;
+     }
+     .bar {
+          background-color: #F0F0F0;
+          border-radius: var(--br7);
+          color: var(--t500);
+          height: 29px;
+          padding: 0 var(--g10);
+     }
+
+     .bar span {
+          color: var(--t600);
+          transition: inherit;
+     }
+
+     .bar svg {
+          height: 12.5px;
+          width: 12.5px;
+     }
+
+     
+
+     .bar-chart-metric-wrap {
+          width: var(--g80);
+     }
+
+     .percentage-wrap {
+          overflow: hidden;
+          width: 0px;
+     }
+}
+
+.bar-chart-list-wrap .list-row:hover {
+     .bar {
+          color: var(--t700);
+     }
+
+     .bar span{
+          color: var(--t700);
+     }
+}
+
+/*  TODO: ORGANISE   */
+
+.a-f-s {
+     align-items: flex-start;
+}
+
+.j-f-e {
+     justify-content: flex-end;
+}
+
+.j-f-s {
+     justify-content: flex-start;
+}
+
+.g12 { gap: var(--g12);}
+.g11 { gap: var(--g11); }
+.g36 { gap: var(--g36);}
+
+.g24 {
+     gap: var(--g24);
+}
+
+:root {
+     --red: #DC2626;
+     --blue: #0099FF;
+
+     --g36: 36px; 
+     --g11: 11px;
+     --g24: 24px;
+     --g80: 80px;
+     --g60: 60px;
+}
+
+.metrics-tab .change {
+     color: var(--t300);
+}
+
+.change.positive {
+     color: var(--green);
+}
+
+.change.negative {
+     color: var(--red);
+}
+
+.slider {
+     background-color: #F5F5F5;
+     box-shadow: 0px 0.5px 3px 0px rgba(20, 20, 20, 6%), 0px 0px 0px 1px rgba(20, 20, 20, 6%);
+     position: relative;
+     border-radius: var(--br7);
+}
+
+.slider > button:first-of-type {
+     border-radius: var(--br7) 0 0 var(--br7);
+}
+
+.slider > button:last-of-type {
+     border-radius: 0 var(--br7) var(--br7) 0;
+}
+
+.slider button.active {
+     color: var(--t900);
+}
+
+.slider button {
+     color: var(--t500);
+     position: relative;
+     padding: var(--g6) var(--g10);
+}
+
+.slider button:hover {
+     background-color: hsl(0, 0%, 0%, .03);
+     color: var(--t700);
+}
+
+.slider .slider-active {
+     position: absolute;
+     background-color: white;
+     height: 100%;
+     border-radius: var(--br7);
+     box-shadow: 0px 0.5px 3px 0px rgba(20, 20, 20, 6%), 0px 0px 0px 1px rgba(20, 20, 20, 6%);
+     width: 50px;
+}
+
+.text-micro {
+     font-size: var(--text-micro);
+}

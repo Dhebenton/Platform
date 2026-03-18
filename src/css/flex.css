@@ -1,29 +1,39 @@
 :root {
      --g64: 64px;
-     --g42: 42px;
-     --g38: 38px;
-     --g36: 36px;
-     --g34: 34px;
-     --g30: 30px;
-     --g28: 28px;
-     --g26: 26px;
-     --g24: 24px;
+     --g52: 52px;
+     --g40: 40px;
      --g22: 22px;
      --g20: 20px;
      --g18: 18px;
      --g16: 16px;
-     --g14: 14px;
      --g12: 12px;
      --g10: 10px;
+     --g9: 9px;
      --g8: 8px;
      --g6: 6px;
-     --g4: 4px;
      --g5: 5px;
+     --g4: 4px;
 
-     --br14: 14px;
-     --br12: 12px;
+     --br13: 13px;
+     --br10: 10px;
+     --br8: 8px;
      --br7: 7px;
 }
+
+/*   GAP   */
+.g64 { gap: var(--g64 );}
+.g52 { gap: var(--g52 );}
+.g20 { gap: var(--g20) ;}
+.g18 { gap: var(--g18) ;}
+.g16 { gap: var(--g16) ;}
+.g10 { gap: var(--g10) ;}
+.g9 { gap: var(--g9) ;}
+.g8 { gap: var(--g8) ;}
+.g6 { gap: var(--g6) ;}
+.g5 { gap: var(--g5) ;}
+.g4 { gap: var(--g4);}
+
+/*   DISPLAY   */
 
 .f-col {
      display: flex;
@@ -35,69 +45,56 @@
      align-items: center;
 }
 
+.j-s-b {
+     justify-content: space-between;
+}
+
 .flex {
      flex: 1;
 }
 
-.g28 {
-     gap: var(--g28);
+.a-c {
+     align-items: center;
 }
 
-.g20 {
-     gap: var(--g20);
+.full-width {
+     width: 100%;
 }
 
-.g14 {
-     gap: var(--g14);
+.padding-bottom-64 {
+     padding-bottom: var(--g64);
 }
 
-.g10 {
-     gap: var(--g10);
+.padding-bottom-40 {
+     padding-bottom: var(--g40);
 }
 
-.g8 {
-     gap: var(--g8);
-}
+/*   BREAKPOINT   */
 
-.g6 {
-     gap: var(--g6);
-}
-
-.g5 {
-     gap: var(--g5);
-}
-
-.margin-top-auto {
-     margin-top: auto;
-}
-
-@media (max-width: 1340px) {
+@media (max-width: 1440px) {
      :root {
-          --multiplier: .93;
+          --flex-multiplier: .93;
+          --g64: round(calc(64px * var(--flex-multiplier)), 1px);
+          --g52: round(calc(52px * var(--flex-multiplier)), 1px);
+          --g40: round(calc(40px * var(--flex-multiplier)), 1px);
+          --g22: round(calc(22px * var(--flex-multiplier)), 1px);
+          --g20: round(calc(20px * var(--flex-multiplier)), 1px);
+          --g18: round(calc(18px * var(--flex-multiplier)), 1px);
+          --g16: round(calc(16px * var(--flex-multiplier)), 1px);
+          --g12: round(calc(12px * var(--flex-multiplier)), 1px);
+          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
+          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
+          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
+          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
+          --g9: round(calc(9px * var(--flex-multiplier)), 1px);
+          --g8: round(calc(8px * var(--flex-multiplier)), 1px);
+          --g6: round(calc(6px * var(--flex-multiplier)), 1px);
+          --g5: round(calc(5px * var(--flex-multiplier)), 1px);
+          --g4: round(calc(4px * var(--flex-multiplier)), 1px);
 
-          --g64: calc(64px * var(--multiplier));
-          --g42: calc(42px * var(--multiplier));
-          --g38: calc(38px * var(--multiplier));
-          --g36: calc(36px * var(--multiplier));
-          --g34: calc(34px * var(--multiplier));
-          --g30: calc(30px * var(--multiplier));
-          --g28: calc(28px * var(--multiplier));
-          --g26: calc(26px * var(--multiplier));
-          --g24: calc(24px * var(--multiplier));
-          --g22: calc(22px * var(--multiplier));
-          --g20: calc(20px * var(--multiplier));
-          --g18: calc(18px * var(--multiplier));
-          --g16: calc(16px * var(--multiplier));
-          --g14: calc(14px * var(--multiplier));
-          --g12: calc(12px * var(--multiplier));
-          --g10: calc(10px * var(--multiplier));
-          --g8: calc(8px * var(--multiplier));
-          --g6: calc(6px * var(--multiplier));
-          --g5: calc(5px * var(--multiplier));
-          --g4: calc(4px * var(--multiplier));
-
-          --br14: 12px;
-          --br12: 10px;
+          --br13: 12px;
+          --br8: 7px;
           --br7: 6px;
      }
+
 }
