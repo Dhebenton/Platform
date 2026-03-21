@@ -22,6 +22,7 @@
      --weight-semibold: 'wght' calc(690 * var(--weight-multiplier));
      --weight-semi-medium: 'wght' calc(630 * var(--weight-multiplier));
      --weight-medium: 'wght' calc(560 * var(--weight-multiplier));
+     --weight-regular: 'wght' calc(490 * var(--weight-multiplier));
 }
 
 /*  COLORS   */
@@ -95,3 +96,4 @@
           --text-small-spacing: .026em;
      }
 }
+

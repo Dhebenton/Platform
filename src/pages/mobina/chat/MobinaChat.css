@@ -1,70 +1,30 @@
-/*   BAR CHART   */
-
-.bar-chart-card {
-     padding: var(--g16) var(--g18);
-}
-
-.bar-chart-list-wrap {
-
-     .list-row {
-          display: grid;
-          cursor: pointer;
-          grid-template-columns: 1fr auto;
-     }
-     .bar {
-          background-color: #F0F0F0;
-          border-radius: var(--br7);
-          color: var(--t500);
-          height: 29px;
-          padding: 0 var(--g8);
-     }
-
-     .list-row:hover .bar {
-          background-color: #D9D9D9;
-     }
-
-.bar span {
-          color: var(--t600);
-          transition: inherit;
-     }
-
-     .bar svg {
-          height: 12.5px;
-          width: 12.5px;
-          min-width: 12.5px;
-     }
-
-     .bar img {
-          object-fit: cover;
-     }
-     
-
-     .bar-chart-metric-wrap {
-          width: var(--g72);
-     }
-
-     .percentage-wrap {
+.mobina-chat-section {
+     .chat-container {
+          position: relative;
+          border-radius: var(--br18);
           overflow: hidden;
-          width: 0px;
-     }
-}
-
-.bar-chart-list-wrap .list-row:hover {
-     .bar {
-          color: var(--t800);
+          height: 350px;
      }
 
-     .bar span{
-          color: var(--t800);
+     .background {
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
      }
-}
 
-@media (max-width: 1440px) {
-     .bav img,
-     .bar svg {
-          height: 11.5px;
-          width: 11.5px;
-          min-width: 11.5px;
+     .background div {
+          position: absolute;
+          top: 0;
+          width: 100%;
+          left: 0;
+          height: 100%;
+          background: linear-gradient(180deg, rgba(255, 255, 255, 0%) 0%, rgba(255, 255, 255, 90%) 100%);
+     }
+
+     canvas {
+          scale: 1.2;
+          height: 100vh;
      }
 }
 
@@ -80,6 +40,10 @@
 
 .j-f-s {
      justify-content: flex-start;
+}
+
+.j-c {
+     justify-content: center;
 }
 
 .g12 { gap: var(--g12);}
@@ -100,6 +64,8 @@
      --g24: 24px;
      --g80: 80px;
      --g60: 60px;
+
+     --br18: 14px;
 }
 
 .metrics-tab .change {
