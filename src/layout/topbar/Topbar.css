@@ -1,69 +1,55 @@
 /*   TOPBAR   */
 
 header {
-     padding: var(--g22) var(--main-padding);
-} 
+     padding: var(--g28) var(--g72);
+}
 
 /*   TABS   */
 
 header {
-
+     
      .tabs-wrap {
-          position: relative;
-          padding-bottom: var(--g6);
+          padding-bottom: var(--g10);
           border-bottom: 1px solid var(--stroke-primary);
+          position: relative;
      }
 
-     .tabs-wrap > .tab:first-of-type {
+     .tabs-wrap .slider {
+          height: 2px;
+          border-radius: 50px;
+          position: absolute;
+          bottom: -1px;
+          background-color: var(--label-black);
+     }
+
+     .tabs-wrap .slider-hover {
+          position: absolute;
+          top: 0;
+          border-radius: var(--br6);
+          bottom: var(--g10);
+          background-color: var(--background-hover);
+     }
+
+     .tabs-wrap button:first-of-type {
           margin-left: calc(var(--g12) * -1);
      }
 
      .tab {
-          padding: var(--g8) var(--g12);
-          font-size: var(--text-small);
-          letter-spacing: var(--text-small-spacing);
+          font-size: inherit;
+          font-variation-settings: inherit;
+          color: var(--label-quanternary);
+          letter-spacing: inherit;
+
           position: relative;
-          text-align: center;
-          color: var(--t500);
-          font-variation-settings: var(--weight-medium);
+          padding: var(--g8) var(--g12);
      }
 
      .tab:hover {
-          color: var(--t800);
+          color: var(--label-secondary);
      }
 
      .tab.active {
-          font-variation-settings: var(--weight-semi-medium);
-          color: var(--tblack);
-     }
-
-     .tabs-wrap .slider {
-          height: 1px;
-          background-color: var(--tblack);
-          position: absolute;
-          bottom: -1px;
-          box-shadow: 0px -.3px 0px .3px var(--tblack);
-          border-radius: 50px;
-     }
-
-     .tabs-wrap .slider-hover {
-          bottom: var(--g6);
-          border-radius: var(--br7);
-          background-color: #F2F2F2;
-          top: 0px;
-          position: absolute;
-          pointer-events: none;
+          color: var(--label-black);
+          font-variation-settings: var(--body-s-semibold);
      }
 }
-
-/*   BREAKPOINT   */
-
-@media (max-width: 1440px) {
-     /*   TOPBAR   */
-}
-
-
-
-
-
-

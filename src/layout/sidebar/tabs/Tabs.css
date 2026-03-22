@@ -1,0 +1,56 @@
+/*  TABS   */
+
+nav .tab {
+     color: var(--label-quanternary);
+     display: grid;
+     height: 30px;
+     min-height: 30px;
+     padding: 0 var(--g10);
+     text-align: left;
+     align-items: center;
+     grid-template-columns: 12.5px 1fr;
+     border-radius: var(--br8);
+}
+
+nav .tab svg.height {
+     height: 12.5px;
+     max-height: 12.5px;
+     width: auto;
+}
+
+nav .tab svg.width {
+     width: 12.5px;
+     max-width: 12.5px;
+     height: auto;
+}
+
+nav .tab:hover {
+     background-color: var(--background-hover);
+     color: var(--label-secondary);
+}
+
+nav .tab.active {
+     background-color: var(--background-active);
+     color: var(--label-black);
+     font-variation-settings: var(--body-small-medium);
+}
+
+/*   SMALL   */
+
+nav .tab.small {
+     height: 28px;
+     border-radius: var(--br6);
+     min-height: 28px;
+}
+
+nav .tab.small svg.height {
+     height: 12px;
+     max-height: 12px;
+     width: auto;
+}
+
+nav .tab.small svg.width {
+     width: 12px;
+     max-width: 12px;
+     height: auto;
+}

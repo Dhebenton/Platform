@@ -1,82 +1,48 @@
-@font-face {
-     font-family: 'PPNeueMontreal';
-     src: url('/PPNeueMontreal.woff2') format('woff2');
-     font-weight: 100 900;
-     font-style: normal;
-     font-display: swap;
+.card.content-type-option {
+     padding: var(--g22) var(--g28);
+     text-align: left;
+     position: relative;
 }
 
-* {
-     box-sizing: border-box;
-     padding: 0;
-     font-family: "PPNeueMontreal";
-     margin: 0;
-     line-height: 1;
+.card.content-type-option > svg:first-of-type {
+     height: 110px;
+     width: 82px;
+     border-radius: 5px;
+     box-shadow: 0px 5px 8px 0px rgba(0, 0, 0, 2%), 0px 0.5px 0.5px 0px rgba(0, 0, 0, 3%), 0px 2.0999999046325684px 2.5px 0px rgba(0, 0, 0, 3%), 0px 10px 25px 0px rgba(0, 0, 0, 4%), 0px 1px 1.600000023841858px 0px rgba(0, 0, 0, 3%), 0px 0px 0px 1px #f0f0f0;
 }
 
-p {
-     text-wrap: pretty;
+.card.content-type-option > * {
+     position: relative;
 }
 
-input,
-input::placeholder,
-a,
-button,
-.tra {
-  transition: all .22s cubic-bezier(0.22, 0.61, 0.36, 1);
+.card.content-type-option > div > :first-child {
+     margin-bottom: var(--g4);
 }
 
-* {
-     box-sizing: border-box;
-     padding: 0;
-     font-family: "PPNeueMontreal" !important;
-     margin: 0;
-     line-height: 1;
+.card.content-type-option .button-black {
+     margin-top: var(--g20);
+     margin-right: auto;
 }
 
-body {
-     height: 100%;
-     -webkit-font-smoothing: antialiased;
-     -moz-osx-font-smoothing: grayscale;
-     text-rendering: optimizeLegibility;
-     font-kerning: normal;
-     font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
-     font-optical-sizing: auto;
-     font-family: 'PPNeueMontreal';
-     background-color: white;
-     font-variant-ligatures: common-ligatures;
-     font-synthesis: none;
+/*   HOVER   */
+
+.card.content-type-option:hover {
+     background-color: var(--background-card-hover);
 }
 
-html,
-#root,
-body {
-     height: 100%;
+.dotted-bg::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, transparent 45%, var(--background-card-hover) 100%);
+  opacity: 0;
+  transition: opacity 0.2s ease;
 }
 
-p {
-     text-wrap: pretty;
+.card.content-type-option:hover .dotted-bg::after {
+  opacity: 1;
 }
-
-#root {
-     display: flex
-}
-
-button {
-     background-color: transparent;
-     border: none;
-     cursor: pointer;
-}
-
-a {
-     text-decoration: none;
-}
-
-button:active,
-a:active {
-     scale: .98;
-}
-
 
 /* TODO:  ORGANISE   */
 
@@ -85,6 +51,7 @@ a:active {
      position: absolute !important;
      inset: 10px;
      border-radius: inherit;
+
      background-image: radial-gradient(circle, #00000018 1px, transparent 1px);
      background-size: 12px 12px;
 }
@@ -98,6 +65,9 @@ a:active {
      background: linear-gradient(to bottom, transparent 45%, white 100%);
 }
 
+.margin-bottom-28 {
+     margin-bottom: var(--g28);
+}
 
 .line-height-14 {
      line-height: 1.4;
@@ -138,6 +108,19 @@ a:active {
      color: var(--label-quanternary);
 }
 
+.f-col {
+     display: flex;
+     flex-direction: column;
+}
+
+.f-row {
+     display: flex;
+     align-items: center;
+}
+
+.g20 {
+     gap: var(--g20);
+}
 
 html,
 body,
@@ -145,8 +128,46 @@ body,
      height: 100%;
 }
 
+.h-s-semibold {
+     font-size: var(--heading-small);
+     letter-spacing: 0.005em;
+     font-variation-settings: var(--h-s-semibold);
+}
+.h-m-medium {
+     font-size: var(--heading-mediu);
+     font-variation-settings: var(--h-m-medium);
+     letter-spacing: .005em;
+}
 
+.b-xs-medium {
+     font-size: var(--body-xsmall);
+     letter-spacing: .025em;
+     font-variation-settings: var(--body-xsmall-medium);
+}
 
+.b-s-regular {
+     font-size: var(--body-small);
+     font-variation-settings: var(--body-small-regular);
+     letter-spacing: .02em;
+}
+
+.h-r-regular {
+     font-size: var(--heading-regular);
+     font-variation-settings: var(--h-r-regular);
+     letter-spacing: .005em;
+}
+
+.b-xs-regular {
+     font-size: var(--body-xsmall);
+     font-variation-settings: var(--body-xsmall-regular);
+     letter-spacing: .02em;
+}
+
+.b-xsmall-semibold {
+     font-size: var(--body-xsmall);
+     font-variation-settings: var(--body-xs-semibold);
+
+}
 
 .b-xsmall-semibold span,
 .b-xsmall-semibold p,
@@ -159,6 +180,9 @@ body,
      letter-spacing: inherit;
 }
 
+.j-c {
+     justify-content: center;
+}
 
 section.padding-default {
      padding: 0 var(--g72);
@@ -175,7 +199,6 @@ section {
 .card {
      background-color: white;
      border-radius: var(--br12);
-     box-shadow: 0px 0.5px 3px 0px rgba(0, 0, 0, 4%), 0px 0px 0px 1px rgba(0, 0, 0, 8%);
 }
 
 .card.card-button {
@@ -190,6 +213,10 @@ main {
      flex: 1;
 }
 
+.flex {
+     flex: 1;
+}
+
 .button-black {
      background-color: #1E1E1F;
      color: #F5F5F5;
@@ -199,6 +226,8 @@ main {
      padding: 7px 13px;
      border-radius: var(--br6);
 }
+
+
 
 .button-black.small p{
      padding-top: 2px;

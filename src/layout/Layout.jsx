@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
+import './Layout.css'
 import Sidebar from "./sidebar/Sidebar";
 import Topbar from "./topbar/Topbar";
-import './Layout.css'
 
 export default function Layout() {
    return (
       <>
-         <Sidebar />
+          <Sidebar />
          <main>
                <Topbar />
                <Outlet />

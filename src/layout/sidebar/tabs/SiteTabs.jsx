@@ -1,6 +1,6 @@
 import { NavLink } from "react-router-dom";
-import { AnalyticsIcon, ContentAssetsIcon, HomeIcon, LogsIcon, MobinaIcon, ModulesHubIcon, PerformanceIcon, SplitTestingIcon, VisibilityIcon } from "../../../assets/Icons";
 import { Fragment } from "react";
+import { AnalyticsIcon, ContentIcon, HomeIcon, InfrastructureIcon, LogsIcon, MobinaIcon, ModulesIcon, PerformanceIcon, SecurityIcon, SmartFormsIcon, SplitTestingIcon, VisibilityIcon } from "../../../assets/Icons";
 
 const TAB_GROUPS = [
   {
@@ -17,15 +17,16 @@ const TAB_GROUPS = [
     tabs: [
       { to: "/performance",     icon: <PerformanceIcon />,    label: "Performance" },
       { to: "/split-testing",   icon: <SplitTestingIcon />,   label: "Split Testing" },
-      { to: "/content-assets",  icon: <ContentAssetsIcon />,  label: "Content & Assets" },
-      { to: "/modules-hub",     icon: <ModulesHubIcon />,     label: "Modules Hub" },
+      { to: "/content-assets",  icon: <ContentIcon />,  label: "Content & Assets" },
+      { to: "/smart-forms",     icon: <SmartFormsIcon />,     label: "Smart Forms" },
+      { to: "/modules-hub",     icon: <ModulesIcon />,     label: "Modules Hub" },
     ],
   },
   {
     label: "Management",
     tabs: [
-      { to: "/infrastructure",    icon: <SplitTestingIcon />,  label: "Infrastructure" },
-      { to: "/access-security",   icon: <ContentAssetsIcon />, label: "Access & Security" },
+      { to: "/infrastructure",    icon: <InfrastructureIcon />,  label: "Infrastructure" },
+      { to: "/access-security",   icon: <SecurityIcon />, label: "Access & Security" },
       { to: "/system-activity",   icon: <LogsIcon />,    label: "System Activity" },
     ],
   },
@@ -37,20 +38,20 @@ export default function SiteTabs() {
       {TAB_GROUPS.map(({ label, tabs }) => (
         <Fragment key={label}>
           <div className="f-row tab-group be-rel">
-            <span className="text-xsmall weight-medium t300">{label}</span>
+            {/* <span className="b- weight-medium t300">{label}</span> */}
           </div>
           {tabs.map(({ to, icon, label }) => (
             <NavLink
               key={to}
               to={to}
-              className={({ isActive }) => `tab g9${isActive ? " active" : ""}`}
+              className={({ isActive }) => `tab b-s-regular g9${isActive ? " active" : ""}`}
             >
               {icon}
               <p>{label}</p>
             </NavLink>
           ))}
         </Fragment>
-      ))}
+     ))}
     </>
   );
 }

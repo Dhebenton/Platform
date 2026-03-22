@@ -1,0 +1,28 @@
+.card.bar-chart {
+     padding: var(--g17);
+}
+
+/*   TODO:  */
+
+.grid {
+     display: grid ;
+}
+
+.two-columns {
+     grid-template-columns: 1fr 1fr;
+}
+
+
+.medium-width {
+     width: 1000px;
+     max-width: 1000px;
+}
+
+.a-c {
+     align-items: center;
+}
+
+:root {
+     --g18: 18px;
+     --g17: 17px;
+}

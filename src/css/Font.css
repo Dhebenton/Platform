@@ -1,0 +1,100 @@
+:root {
+     --heading-medium: 20px;
+     --heading-regular: 18px;
+     --heading-small: 16px;
+     --body-regular: 14px;
+     --body-small: 13px;
+     --body-xsmall: 12.5px;
+
+
+     /* SEMI BOLD */
+
+     --h-s-semibold: 'wght' 680;
+     --body-s-semibold: 'wght' 680;
+     --body-xs-semibold: 'wght' 640;
+
+
+     /* MEDIUM */
+
+     --h-m-medium: 'wght' 650;
+     --body-small-medium: 'wght' 600;
+     --body-r-medium: 'wght' 600;
+     --body-xsmall-medium: 'wght' 580;
+
+
+     /* REGULAR */
+
+     --h-r-regular: 'wght' 630;
+     --b-r-regular: 'wght' 560;
+     --body-small-regular: 'wght' 560;
+     --body-xsmall-regular: 'wght' 560;
+}
+
+.h-s-semibold {
+     font-size: var(--heading-small);
+     letter-spacing: 0.005em;
+     font-variation-settings: var(--h-s-semibold);
+}
+
+.b-s-semibold {
+     font-size: var(--body-small);
+     font-variation-settings: var(--body-s-semibold);
+}
+
+.b-xs-semibold {
+     font-size: var(--body-xsmall);
+     font-variation-settings: var(--body-xs-semibold);
+     letter-spacing: .02em;
+}
+
+
+.b-r-medium {
+     letter-spacing: .018em;
+     font-size: var(--body-regular);
+     font-variation-settings: var(--body-r-medium);
+}
+
+
+
+.b-r-regular {
+     font-size: var(--body-regular);
+     letter-spacing: 0.018em;
+     font-variation-settings: var(--b-r-regular);
+}
+
+.h-m-medium {
+     font-size: var(--heading-mediu);
+     font-variation-settings: var(--h-m-medium);
+     letter-spacing: .005em;
+}
+
+
+
+.b-xs-medium {
+     font-size: var(--body-xsmall);
+     letter-spacing: .025em;
+     font-variation-settings: var(--body-xsmall-medium);
+}
+
+.b-s-regular {
+     font-size: var(--body-small);
+     font-variation-settings: var(--body-small-regular);
+     letter-spacing: .02em;
+}
+
+.h-r-regular {
+     font-size: var(--heading-regular);
+     font-variation-settings: var(--h-r-regular);
+     letter-spacing: .005em;
+}
+
+.b-xs-regular {
+     font-size: var(--body-xsmall);
+     font-variation-settings: var(--body-xsmall-regular);
+     letter-spacing: .02em;
+}
+
+.b-xsmall-semibold {
+     font-size: var(--body-xsmall);
+     font-variation-settings: var(--body-xs-semibold);
+}

@@ -1,0 +1,17 @@
+.site-dropdown-favicon-wrap {
+     height: 20px;
+     width: 20px;
+     background-color: white;
+     border-radius: 50px;
+     box-shadow: 0px 0.5px 1px 0px rgba(0, 0, 0, 7%), 0px 0px 0px 1px rgba(0, 0, 0, 13%);
+}
+
+.site-dropdown-favicon-wrap img {
+     height: 14px;   
+     width: 14px;
+     border-radius: 50px;
+}
+
+.dropdown-wrap.site-dropdown {
+     margin-bottom: calc(var(--g20) - var(--g5));
+}

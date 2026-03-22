@@ -5,19 +5,21 @@ import { AppProvider } from "./context/AppContext";
 import "./App.css";
 import Layout from "./layout/Layout";
 
-import './css/Colors.css'
-import './css/flex.css'
-import './css/Fonts.css'
-import './css/Cards.css'
+import './css/Flex.css' 
+import './css/Font.css' 
 
 import "./Unorganised.css";
+
+const VisibilitContent = lazy(
+   () => import("./pages/visibility/VisibilityContent"),
+);
 
 const AnalyticsOverview = lazy(
    () => import("./pages/analytics/overview/AnalyticsOverview"),
 );
 
 const MobinaChat = lazy(
-   () => import("./pages/mobina/chat/MobinaChat"),
+   () => import("./pages/mobina/mobina-chat/MobinaChat"),
 );
 
 
@@ -80,9 +82,10 @@ function App() {
                   </AppProvider>
                }
             >
-               <Route path="/" element={<Navigate to="/analytics" replace />} />
-               <Route path="analytics" element={<AnalyticsOverview />} />
+               <Route path="/" element={<Navigate to="/visibility" replace />} />
+               <Route path="/visibility" element={<VisibilitContent />} />
                <Route path="/mobina" element={<MobinaChat />} />
+               <Route path="/analytics" element={<AnalyticsOverview />} />
             </Route>
          </Routes>
       </Suspense>
