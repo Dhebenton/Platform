@@ -1,45 +1,27 @@
 :root {
      --background-secondary: #F9F9F9;
-
-     --stroke-primary: #E5E5E5;
-     --stroke-secondary: #E5E5E5;
-
-     --background-active: #E6E6E6;
      --background-hover: #EDEDED;
+     --background-active: #E7E6E5;
 
-     --label-black: #080808;
-     --label-primary: #303030;
-     --label-secondary: #4A4A4A;
-     --label-tertiary: #828282;
-     --label-quanternary: #A1A1A1;
-     --label-quinary: #ABABAB;
-     --label-placeholder: #B8B8B8;
+     --stroke-primary: #E8E8E8;
+     --stroke-secondary: #DEDEDE;
+
+     --label-black: #060505;
+     --label-secondary: #464544;
+     --label-tertiary: #7E7D7C;
+     --label-quaternary: #9D9B9B;
+     --label-quinary: #B0B0B0;
+     --label-placeholder: #C2C2C2;
 }
 
 .label-black {
-    color: var(--label-black);
-}
-
-.label-primary {
-    color: var(--label-primary);
-}
-
-.label-secondary {
-    color: var(--label-secondary);
-}
-
-.label-tertiary {
-    color: var(--label-tertiary);
-}
-
-.label-quaternary {
-    color: var(--label-quanternary);
+     color: var(--label-black);
 }
 
 .label-quinary {
-    color: var(--label-quinary);
+     color: var(--label-quinary);
 }
 
 .label-placeholder {
-    color: var(--label-placeholder);
+     color: var(--label-placeholder);
 }

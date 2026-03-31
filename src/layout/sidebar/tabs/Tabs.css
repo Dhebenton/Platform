@@ -1,16 +1,16 @@
-nav .tab-group {
-     padding: var(--g10) ;
-     padding-top: var(--g18);
-}
-
 nav .tab {
      display: grid;
-     grid-template-columns: 12.5px 1fr;
-     color: var(--label-quanternary);
-     padding: 0 var(--g10);
-     border-radius: var(--br8);
      align-items: center;
-     height: 29px;
+     grid-template-columns: 13px 1fr;
+     height: 30px;
+     color: var(--label-quaternary);
+     border-radius: var(--br7);
+     padding: 0 var(--g10);
+     text-align: left;
+}
+
+nav .tab svg {
+     overflow: visible;
 }
 
 nav p {
@@ -18,36 +18,50 @@ nav p {
      padding-top: 2px;
 }
 
-nav svg {
-     overflow: visible;
-     justify-self: center;
-}
-
 nav .tab svg.height {
-     height: 12.5px;
-     max-height: 12.5px;
+     height: 13px;
      width: auto;
-}
+} 
 
 nav .tab svg.width {
-     min-width: 12.5px;
-     width: 12.5px;
+     width: 13px;
      height: auto;
 }
 
+/*   TAB GROUPS   */
+
+.tab-group {
+     padding: var(--g10);
+     padding-top: var(--g18);
+}
+
+.tab-group::before {
+     height: 1px;
+     background-color: var(--stroke-secondary);
+     left: 2px;
+     right: 2px;
+     top: 50%;
+     opacity: 0;
+     transform: translateX(6px);
+}
 
 /*   HOVER   */
 
 nav .tab:hover {
      background-color: var(--background-hover);
      color: var(--label-secondary);
-}
+} 
 
-
-/*   ACTIVE   */
+/* ACTIVE */
 
 nav .tab.active {
-     color: var(--label-black);
-     font-variation-settings: var(--b-s-medium);
      background-color: var(--background-active);
+     color: var(--label-black);
+     font-variation-settings: var(--body-small-medium);
 }
+
+
+
+
+
+

@@ -1,110 +1,83 @@
 :root {
-    --h-m: 20px;
-    --h-r: 18px;
+     --h-medium: 19px;
+     --h-regular: 17.5px;
+     --h-m-spacing: .015em;
 
-    --b-xl: 15px;
-    --b-l: 14px;
-    --b-m: 13.5px;
-    --b-r: 13px;
-    --b-s: 12.5px;
-    --b-xs: 11.5px;
+     --b-medium: 13.5px;
+     --b-regular: 13px;
+     --b-small: 12.5px;
+     --b-xsmall: 11.5px;
+     --b-medium-spacing: 0.025em;
+     --b-small-spacing: 0.03em;
 
-    --h-m-semibold: 'wght' 690;
+     --wmultiplier: .95;
 
-    --b-xl-medium: 'wght' 670;
-    --h-m-medium: 'wght' 670;
-    --h-r-medium: 'wght' 670;
-    --b-m-medium: 'wght' 660;
-    --b-r-medium: 'wght' 640;
-    --b-s-medium: 'wght' 640;
+     --heading-medium-medium: 'wght' calc(660 * var(--wmultiplier));
 
-    --b-xl-regular: 'wght' 590;
-    --b-m-regular: 'wght' 580;
-    --b-r-regular: 'wght' 560;
-    --b-s-regular: 'wght' 560;
-    --b-xs-regular: 'wght' 550;
+     --heading-regular-medium: 'wght' calc(640 * var(--wmultiplier));
 
-    --b-m-light: 'wght' 520;
+     --body-medium-medium: 'wght' calc(640 * var(--wmultiplier));
+     --body-medium-regular: 'wght' calc(580 * var(--wmultiplier));
 
+     --body-regular-medium: 'wght' calc(640 * var(--wmultiplier));
+     --body-regular-regular: 'wght' calc(570 * var(--wmultiplier));
+
+     --body-small-medium: 'wght' calc(640 * var(--wmultiplier) );
+     --body-small-regular: 'wght' calc(570 * var(--wmultiplier) );
+
+     --body-xsmall-regular: 'wght' calc(560 * var(--wmultiplier) );
 }
 
-/* Heading */
-.h-m-semibold {
-    font-size: var(--h-m);
-    letter-spacing: .01em;
-    font-variation-settings: var(--h-m-semibold);
-}
+/* HEADING MEDIUM */
 
 .h-m-medium {
-    font-size: var(--h-m);
-    letter-spacing: .015em;
-    font-variation-settings: var(--h-m-medium);
+     font-size: var(--h-medium);
+     letter-spacing: var(--h-m-spacing);
+     font-variation-settings: var(--heading-medium-medium);
 }
+
+/* HEADING REGULAR */
 
 .h-r-medium {
-    font-size: var(--h-r);
-    letter-spacing: .01em;
-    font-variation-settings: var(--h-r-medium);
+     font-size: var(--h-regular);
+     letter-spacing: var(--h-m-spacing);
+     font-variation-settings: var(--heading-regular-medium);
 }
 
-/* Body medium */
+/* BODY MEDIUM */
 
-.b-xl-medium {
-     letter-spacing: .015em;
-     font-size: var(--b-xl);
-     font-variation-settings: var(--b-xl-medium);
-}
 .b-m-medium {
-    letter-spacing: .02em;
-    font-size: var(--b-m);
-    font-variation-settings: var(--b-m-medium);
-}
-
-.b-r-medium {
-    font-size: var(--b-r);
-    letter-spacing: .02em;
-    font-variation-settings: var(--b-r-medium);
-}
-
-.b-s-medium {
-    font-size: var(--b-s);
-    letter-spacing: .02em;
-    font-variation-settings: var(--b-s-medium);
-}
-
-/* Body regular */
-.b-xl-regular {
-    font-size: var(--b-xl);
-    letter-spacing: .028em;
-    font-variation-settings: var(--b-xl-regular);
+     font-size: var(--b-medium);
+     letter-spacing: var(--b-medium-spacing);
+     font-variation-settings: var(--body-medium-medium);
 }
 
 .b-m-regular {
-    font-size: var(--b-m);
-    letter-spacing: .02em;
-    font-variation-settings: var(--b-m-regular);
+     font-size: var(--b-medium);
+     letter-spacing: var(--b-medium-spacing);
+     font-variation-settings: var(--body-medium-regular);
 }
+
+/* BODY REGULAR */
 
 .b-r-regular {
-    font-size: var(--b-r);
-    letter-spacing: .02em;
-    font-variation-settings: var(--b-r-regular);
+     font-size: var(--b-regular);
+     letter-spacing: var(--b-small-spacing);
+     font-variation-settings: var(--body-regular-regular);
 }
+
+/* BODY SMALL */
 
 .b-s-regular {
-    font-size: var(--b-s);
-    letter-spacing: .02em;
-    font-variation-settings: var(--b-s-regular);
+     letter-spacing: var(--b-small-spacing);
+     font-size: var(--b-small);
+     font-variation-settings: var(--body-small-regular);
 }
+
+/* BODY XSMALL */
 
 .b-xs-regular {
-    letter-spacing: .03em;
-    font-size: var(--b-xs);
-    font-variation-settings: var(--b-xs-regular);
-}
-
-/*  LINE HEIGHT   */
-
-.lh-15 {
-     line-height: 1.5;
+     letter-spacing: var(--b-small-spacing);
+     font-size: var(--b-xsmall);
+     font-variation-settings: var(--body-xsmall-regular);
 }

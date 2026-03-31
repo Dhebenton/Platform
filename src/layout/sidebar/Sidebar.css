@@ -1,8 +1,66 @@
-/*  SIDEBAR   */
+:root {
+  --motion-duration: 0.32s;
+  --motion-ease: cubic-bezier(0.3, 0, 0.2, 1);
+}
 
 nav {
-     padding: var(--g12);
      background-color: var(--background-secondary);
-     width: 225px;
      border-right: 1px solid var(--stroke-primary);
+     padding: var(--g12);
+     width: 225px;
+     transition: all var(--motion-ease) var(--motion-duration);
+}
+ 
+/* CLOSED */
+
+nav.closed {
+     width: 57px;
+}
+
+nav.closed {
+     .tab-group span,
+     .tab p{
+          transform: translateX(8px);
+          opacity: 0;
+     }
+
+     .tab-group::before {
+          transform: translateX(0);
+          opacity: 1;
+     }
+}
+
+nav.animation {
+     .tab-group span,
+     .tab p {
+          transition: all var(--motion-ease) .24s .1s !important;
+     }
+
+     .tab-group::before {
+          transition: all var(--motion-ease) .24ss !important;
+     }
+}
+
+nav.closed.animation {
+     .tab-group::before,
+     .tab-group span,
+     .tab p {
+          transition: all var(--motion-ease) .18s !important;
+     }
+
+     .tab-group::before {
+          transition-delay: .18s !important;
+     }
+}
+
+/* TODO:  */
+
+.be-rel {
+     position: relative;
+}
+
+.be-rel::before {
+     position: absolute;
+     display: block;
+     content: "";
 }

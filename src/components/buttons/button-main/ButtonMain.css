@@ -1,46 +1,17 @@
+
+
 .button-main {
      background-color: white;
-     color: var(--button-primary);
-     padding: 7px 11px;
      box-shadow: var(--shadow-interactive);
-     border-radius: var(--br6);
+     border-radius: var(--br5);
 }
 
-.button-main p {
-     letter-spacing: inherit;
-     font-size: inherit;
-     font-variation-settings: inherit;
-}
-
-.button-main:hover {
-     background-color: #F7F7F7;
-     color: var(--label-black);
-     box-shadow: var(--shadow-interactive-hover);
-}
-
-.button-main.icon.small {
-     height: 25px;
+.button-main.small.icon {
      aspect-ratio: 1;
-     padding: 0;
-}
-
-
-.button-main.icon.small.plus-icon {
-     color: var(--button-icon);
-}
-
-.button-main.icon.small.plus-icon:hover {
+     height: 25px;
      color: var(--label-quinary);
 }
 
-.button-main.icon.small.plus-icon svg {
-     height: 11px;
-     width: 11x;
-}
-
-:root {
-     --shadow-interactive: 0px 0.5px 2px 0px rgba(0, 0, 0, 4%), 0px 0.5px 5px 0px rgba(0, 0, 0, 3%), 0px 0px 0px 1px #e8e8e8;
-     --shadow-interactive-hover: 0px 1px 3px 0px rgba(0, 0, 0, 5%), 0px 1px 6px 0px rgba(0, 0, 0, 5%), 0px 0px 0px 1px #E0E0E0;
-     --button-primary: #636363;
-     --button-icon: #C4C4C4;
+.button-main.small.icon.plus svg {
+     height: 12px;
 }

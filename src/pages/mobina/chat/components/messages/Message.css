@@ -1,0 +1,21 @@
+.mobina-chat-container .message-wrap p{
+     font-size: 14.5px;
+     font-variation-settings: 'wght' 600;
+     letter-spacing: .02em;
+     color: var(--label-black);
+     line-height: 1.5 !important;
+}
+
+.mobina-chat-container .user-message {
+     padding: var(--g5) var(--g12);
+     border-radius: 50px;
+     background-color: var(--background-hover);
+}
+
+.a-f-e {
+     align-items: flex-end;
+}
+
+:root {
+     --g5: 5px;
+}

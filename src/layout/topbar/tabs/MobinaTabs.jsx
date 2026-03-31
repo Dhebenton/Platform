@@ -1,5 +1,3 @@
-import { ButtonMainSmall } from "../../../components/buttons/button-main/ButtonMain"
-
 const TABS = ['Mobina Chat','Previous Chats', 'Insights', 'Memory', 'Usage']
 
 export default function MobinaTabs({ activeTab, tabRefs, onTabClick, onTabEnter, onTabLeave }) {
@@ -17,12 +15,4 @@ export default function MobinaTabs({ activeTab, tabRefs, onTabClick, onTabEnter,
          </button>
     </>
   ))
-}
-
-export const MobinaTabsInline = () => {
-     return (
-          <ButtonMainSmall className="margin-left-16">
-               <p>Previous Chats</p>
-          </ButtonMainSmall>
-     )
 }

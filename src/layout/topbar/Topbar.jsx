@@ -1,12 +1,12 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
 import './Topbar.css'
-import MobinaTabs, { MobinaTabsInline } from './tabs/MobinaTabs'
+import MobinaTabs from './tabs/MobinaTabs'
 
 const ROUTE_CONFIG = {
   '/visibility':      { label: 'Visibility' },
   '/analytics':       { label: 'Analytics' },
-  '/mobina':          { label: 'Mobina', Tabs: MobinaTabs, TabsInline: MobinaTabsInline },
+  '/mobina':          { label: 'Mobina', Tabs: MobinaTabs },
   '/performance':     { label: 'Performance' },
   '/overview':        { label: 'Overview' },
   '/split-testing':   { label: 'Split Testing' },
@@ -61,10 +61,9 @@ export default function Topbar() {
   return (
     <>
       <header className="f-col g18">
-        <p className="h-m-medium">{label}</p>
-
+        <p className="h-m-medium label-black">{label}</p>
         {Tabs && (
-          <div className="tabs-wrap b-m-regular f-row">
+          <div className="tabs-wrap b-r-regular f-row">
             <div
               className="slider-hover tra"
               style={{ ...hoverStyle, opacity: isHovering ? 1 : 0 }}
@@ -76,7 +75,6 @@ export default function Topbar() {
               onTabEnter={handleMouseEnter}
               onTabLeave={() => setIsHovering(false)}
             />
-            <button className='tab hover settings'>Settings</button>
             {TabsInline && <TabsInline />}
             <div className="slider tra" style={sliderStyle} />
           </div>

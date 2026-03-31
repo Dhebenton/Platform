@@ -5,15 +5,9 @@ import { AppProvider } from "./context/AppContext";
 import "./App.css";
 import Layout from "./layout/Layout";
 
-import './css/Flex.css' 
-import './css/Colors.css' 
-import './css/Font.css' 
-
-import "./Unorganised.css";
-
-const MobinaChat = lazy(
-   () => import("./pages/mobina/mobina-chat/MobinaChat"),
-);
+import './css/Colors.css'
+import './css/Flex.css'
+import './css/Font.css'
 
 function App() {
    const [session, setSession] = useState(null);
@@ -63,25 +57,9 @@ function App() {
       window.location.href = "https://auth.hypeify.io";
       return null;
    }
-
-   return (
-      <Suspense fallback={null}>
-         <Routes>
-            <Route
-               element={
-                  <AppProvider session={session}>
-                     <Layout />
-                  </AppProvider>
-               }
-            >
-               <Route path="/" element={<Navigate to="/mobina" replace />} />
-               <Route path="/visibility" element={<MobinaChat />} />
-               <Route path="/mobina" element={<MobinaChat />} />
-               <Route path="/analytics" element={<MobinaChat />} />
-            </Route>
-         </Routes>
-      </Suspense>
-   );
+     return (
+          <Layout />
+     )
 }
 
 export default App;

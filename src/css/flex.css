@@ -1,41 +1,34 @@
 :root {
-     --g64: 64px;
-     --g52: 52px;
-     --g40: 40px;
-     --g28: 28px;
-     --g22: 22px;
-     --g20: 20px;
      --g18: 18px;
-     --g16: 16px;
      --g12: 12px;
      --g10: 10px;
      --g9: 9px;
-     --g8: 8px;
-     --g6: 6px;
+     --g7: 7px;
      --g5: 5px;
-     --g4: 4px;
 
-     --br13: 13px;
-     --br10: 10px;
-     --br8: 8px;
      --br7: 7px;
      --br6: 6px;
 }
 
-/*   GAP   */
-.g64 { gap: var(--g64 );}
-.g52 { gap: var(--g52 );}
-.g20 { gap: var(--g20) ;}
-.g18 { gap: var(--g18) ;}
-.g16 { gap: var(--g16) ;}
-.g10 { gap: var(--g10) ;}
-.g9 { gap: var(--g9) ;}
-.g8 { gap: var(--g8) ;}
-.g6 { gap: var(--g6) ;}
-.g5 { gap: var(--g5) ;}
-.g4 { gap: var(--g4);}
+/*  GAP   */
 
-/*   DISPLAY   */
+.g18 {
+     gap: var(--g18);
+}
+
+.g9 {
+     gap: var(--g9);
+}
+
+.g5 {
+     gap: var(--g5);
+}
+
+.flex {
+     flex: 1;
+}
+
+/*  DISPLAY  */
 
 .f-col {
      display: flex;
@@ -47,56 +40,8 @@
      align-items: center;
 }
 
-.j-s-b {
-     justify-content: space-between;
-}
+/* MARGIN */
 
-.flex {
-     flex: 1;
-}
-
-.a-c {
-     align-items: center;
-}
-
-.full-width {
-     width: 100%;
-}
-
-.padding-bottom-64 {
-     padding-bottom: var(--g64);
-}
-
-.padding-bottom-40 {
-     padding-bottom: var(--g40);
-}
-
-/*   BREAKPOINT   */
-
-@media (max-width: 1440px) {
-     :root {
-          --flex-multiplier: .93;
-          --g64: round(calc(64px * var(--flex-multiplier)), 1px);
-          --g52: round(calc(52px * var(--flex-multiplier)), 1px);
-          --g40: round(calc(40px * var(--flex-multiplier)), 1px);
-          --g22: round(calc(22px * var(--flex-multiplier)), 1px);
-          --g20: round(calc(20px * var(--flex-multiplier)), 1px);
-          --g18: round(calc(18px * var(--flex-multiplier)), 1px);
-          --g16: round(calc(16px * var(--flex-multiplier)), 1px);
-          --g12: round(calc(12px * var(--flex-multiplier)), 1px);
-          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
-          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
-          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
-          --g10: round(calc(10px * var(--flex-multiplier)), 1px);
-          --g9: round(calc(9px * var(--flex-multiplier)), 1px);
-          --g8: round(calc(8px * var(--flex-multiplier)), 1px);
-          --g6: round(calc(6px * var(--flex-multiplier)), 1px);
-          --g5: round(calc(5px * var(--flex-multiplier)), 1px);
-          --g4: round(calc(4px * var(--flex-multiplier)), 1px);
-
-          --br13: 12px;
-          --br8: 7px;
-          --br7: 6px;
-     }
-
+.mar-top-auto {
+     margin-top: auto;
 }

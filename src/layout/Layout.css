@@ -1,3 +1,7 @@
 :root {
-     --padding-main: 60px;
+     --main-padding: 64px;
+}
+
+section {
+     padding: var(--g24) var(--main-padding);
 }

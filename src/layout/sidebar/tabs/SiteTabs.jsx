@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import { Fragment } from "react";
 import { AnalyticsIcon, ContentIcon, HomeIcon, InfrastructureIcon, LogsIcon, MobinaIcon, ModulesIcon, PerformanceIcon, SecurityIcon, SmartFormsIcon, SplitTestingIcon, VisibilityIcon } from "../../../assets/Icons";
+import { CloseNav, GearIcons } from "../../../assets/icons";
 
 const TAB_GROUPS = [
   {
@@ -32,13 +33,13 @@ const TAB_GROUPS = [
   },
 ];
 
-export default function SiteTabs() {
+export default function SiteTabs({ToggleSidebar}) {
   return (
     <>
-      {TAB_GROUPS.map(({ label, tabs }) => (
+     {TAB_GROUPS.map(({ label, tabs }) => (
         <Fragment key={label}>
           <div className="f-row tab-group be-rel">
-            <span className="b-xs-regular label-quinary">{label}</span>
+            <span className="label-quinary b-xs-regular">{label}</span>
           </div>
           {tabs.map(({ to, icon, label }) => (
             <NavLink
@@ -52,6 +53,13 @@ export default function SiteTabs() {
           ))}
         </Fragment>
      ))}
+     <button onClick={ToggleSidebar} className="tab g9 b-s-regular mar-top-auto">
+          <CloseNav />
+     </button>
+     <button className="tab g9 b-s-regular">
+          <GearIcons />
+          <p>Site Settings</p>
+     </button>
     </>
   );
 }
