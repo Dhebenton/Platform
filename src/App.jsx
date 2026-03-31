@@ -6,22 +6,14 @@ import "./App.css";
 import Layout from "./layout/Layout";
 
 import './css/Flex.css' 
+import './css/Colors.css' 
 import './css/Font.css' 
 
 import "./Unorganised.css";
 
-const VisibilitContent = lazy(
-   () => import("./pages/visibility/VisibilityContent"),
-);
-
-const AnalyticsOverview = lazy(
-   () => import("./pages/analytics/overview/AnalyticsOverview"),
-);
-
 const MobinaChat = lazy(
    () => import("./pages/mobina/mobina-chat/MobinaChat"),
 );
-
 
 function App() {
    const [session, setSession] = useState(null);
@@ -82,10 +74,10 @@ function App() {
                   </AppProvider>
                }
             >
-               <Route path="/" element={<Navigate to="/visibility" replace />} />
-               <Route path="/visibility" element={<VisibilitContent />} />
+               <Route path="/" element={<Navigate to="/mobina" replace />} />
+               <Route path="/visibility" element={<MobinaChat />} />
                <Route path="/mobina" element={<MobinaChat />} />
-               <Route path="/analytics" element={<AnalyticsOverview />} />
+               <Route path="/analytics" element={<MobinaChat />} />
             </Route>
          </Routes>
       </Suspense>

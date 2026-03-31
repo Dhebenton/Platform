@@ -38,7 +38,7 @@ export default function SiteTabs() {
       {TAB_GROUPS.map(({ label, tabs }) => (
         <Fragment key={label}>
           <div className="f-row tab-group be-rel">
-            {/* <span className="b- weight-medium t300">{label}</span> */}
+            <span className="b-xs-regular label-quinary">{label}</span>
           </div>
           {tabs.map(({ to, icon, label }) => (
             <NavLink

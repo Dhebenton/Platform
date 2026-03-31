@@ -7,10 +7,10 @@ export default function Layout() {
    return (
       <>
           <Sidebar />
-         <main>
+          <main className="flex f-col">
                <Topbar />
                <Outlet />
-         </main>
+          </main>
       </>
    );
 }

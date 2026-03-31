@@ -1,12 +1,8 @@
+/*  SIDEBAR   */
+
 nav {
-     background-color: var(--background-secondary);
-     border-right: 1px solid var(--stroke-primary);
      padding: var(--g12);
-     width: 230px;
+     background-color: var(--background-secondary);
+     width: 225px;
+     border-right: 1px solid var(--stroke-primary);
 }
-
-nav > .tab:last-of-type {
-     margin-bottom: auto;
-}
-
-

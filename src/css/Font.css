@@ -1,100 +1,110 @@
 :root {
-     --heading-medium: 20px;
-     --heading-regular: 18px;
-     --heading-small: 16px;
-     --body-regular: 14px;
-     --body-small: 13px;
-     --body-xsmall: 12.5px;
+    --h-m: 20px;
+    --h-r: 18px;
 
+    --b-xl: 15px;
+    --b-l: 14px;
+    --b-m: 13.5px;
+    --b-r: 13px;
+    --b-s: 12.5px;
+    --b-xs: 11.5px;
 
-     /* SEMI BOLD */
+    --h-m-semibold: 'wght' 690;
 
-     --h-s-semibold: 'wght' 680;
-     --body-s-semibold: 'wght' 680;
-     --body-xs-semibold: 'wght' 640;
+    --b-xl-medium: 'wght' 670;
+    --h-m-medium: 'wght' 670;
+    --h-r-medium: 'wght' 670;
+    --b-m-medium: 'wght' 660;
+    --b-r-medium: 'wght' 640;
+    --b-s-medium: 'wght' 640;
 
+    --b-xl-regular: 'wght' 590;
+    --b-m-regular: 'wght' 580;
+    --b-r-regular: 'wght' 560;
+    --b-s-regular: 'wght' 560;
+    --b-xs-regular: 'wght' 550;
 
-     /* MEDIUM */
+    --b-m-light: 'wght' 520;
 
-     --h-m-medium: 'wght' 650;
-     --body-small-medium: 'wght' 600;
-     --body-r-medium: 'wght' 600;
-     --body-xsmall-medium: 'wght' 580;
-
-
-     /* REGULAR */
-
-     --h-r-regular: 'wght' 630;
-     --b-r-regular: 'wght' 560;
-     --body-small-regular: 'wght' 560;
-     --body-xsmall-regular: 'wght' 560;
 }
 
-.h-s-semibold {
-     font-size: var(--heading-small);
-     letter-spacing: 0.005em;
-     font-variation-settings: var(--h-s-semibold);
-}
-
-.b-s-semibold {
-     font-size: var(--body-small);
-     font-variation-settings: var(--body-s-semibold);
-}
-
-.b-xs-semibold {
-     font-size: var(--body-xsmall);
-     font-variation-settings: var(--body-xs-semibold);
-     letter-spacing: .02em;
-}
-
-
-.b-r-medium {
-     letter-spacing: .018em;
-     font-size: var(--body-regular);
-     font-variation-settings: var(--body-r-medium);
-}
-
-
-
-.b-r-regular {
-     font-size: var(--body-regular);
-     letter-spacing: 0.018em;
-     font-variation-settings: var(--b-r-regular);
+/* Heading */
+.h-m-semibold {
+    font-size: var(--h-m);
+    letter-spacing: .01em;
+    font-variation-settings: var(--h-m-semibold);
 }
 
 .h-m-medium {
-     font-size: var(--heading-mediu);
-     font-variation-settings: var(--h-m-medium);
-     letter-spacing: .005em;
+    font-size: var(--h-m);
+    letter-spacing: .015em;
+    font-variation-settings: var(--h-m-medium);
 }
 
+.h-r-medium {
+    font-size: var(--h-r);
+    letter-spacing: .01em;
+    font-variation-settings: var(--h-r-medium);
+}
 
+/* Body medium */
 
-.b-xs-medium {
-     font-size: var(--body-xsmall);
-     letter-spacing: .025em;
-     font-variation-settings: var(--body-xsmall-medium);
+.b-xl-medium {
+     letter-spacing: .015em;
+     font-size: var(--b-xl);
+     font-variation-settings: var(--b-xl-medium);
+}
+.b-m-medium {
+    letter-spacing: .02em;
+    font-size: var(--b-m);
+    font-variation-settings: var(--b-m-medium);
+}
+
+.b-r-medium {
+    font-size: var(--b-r);
+    letter-spacing: .02em;
+    font-variation-settings: var(--b-r-medium);
+}
+
+.b-s-medium {
+    font-size: var(--b-s);
+    letter-spacing: .02em;
+    font-variation-settings: var(--b-s-medium);
+}
+
+/* Body regular */
+.b-xl-regular {
+    font-size: var(--b-xl);
+    letter-spacing: .028em;
+    font-variation-settings: var(--b-xl-regular);
+}
+
+.b-m-regular {
+    font-size: var(--b-m);
+    letter-spacing: .02em;
+    font-variation-settings: var(--b-m-regular);
+}
+
+.b-r-regular {
+    font-size: var(--b-r);
+    letter-spacing: .02em;
+    font-variation-settings: var(--b-r-regular);
 }
 
 .b-s-regular {
-     font-size: var(--body-small);
-     font-variation-settings: var(--body-small-regular);
-     letter-spacing: .02em;
-}
-
-.h-r-regular {
-     font-size: var(--heading-regular);
-     font-variation-settings: var(--h-r-regular);
-     letter-spacing: .005em;
+    font-size: var(--b-s);
+    letter-spacing: .02em;
+    font-variation-settings: var(--b-s-regular);
 }
 
 .b-xs-regular {
-     font-size: var(--body-xsmall);
-     font-variation-settings: var(--body-xsmall-regular);
-     letter-spacing: .02em;
+    letter-spacing: .03em;
+    font-size: var(--b-xs);
+    font-variation-settings: var(--b-xs-regular);
 }
 
-.b-xsmall-semibold {
-     font-size: var(--body-xsmall);
-     font-variation-settings: var(--body-xs-semibold);
+/*  LINE HEIGHT   */
+
+.lh-15 {
+     line-height: 1.5;
 }

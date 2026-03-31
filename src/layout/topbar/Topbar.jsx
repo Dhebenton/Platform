@@ -1,14 +1,12 @@
 import { useState, useRef, useEffect, useMemo } from 'react'
 import { useLocation } from 'react-router-dom'
-import VisibilityTabs from './tabs/VisibilityTabs'
-import AnalyticsTabs from './tabs/AnalyticsTabs'
-import MobinaTabs from './tabs/MobinaTabs'
 import './Topbar.css'
+import MobinaTabs, { MobinaTabsInline } from './tabs/MobinaTabs'
 
 const ROUTE_CONFIG = {
-  '/visibility':      { label: 'Visibility',  Tabs: VisibilityTabs },
-  '/analytics':       { label: 'Analytics', Tabs: AnalyticsTabs },
-  '/mobina':          { label: 'Mobina', Tabs: MobinaTabs },
+  '/visibility':      { label: 'Visibility' },
+  '/analytics':       { label: 'Analytics' },
+  '/mobina':          { label: 'Mobina', Tabs: MobinaTabs, TabsInline: MobinaTabsInline },
   '/performance':     { label: 'Performance' },
   '/overview':        { label: 'Overview' },
   '/split-testing':   { label: 'Split Testing' },
@@ -22,13 +20,13 @@ const ROUTE_CONFIG = {
 
 export default function Topbar() {
   const { pathname } = useLocation()
-  const [activeTab, setActiveTab] = useState(0)
+  const [activeTab, setActiveTab]   = useState(0)
   const [sliderStyle, setSliderStyle] = useState({})
-  const [hoverStyle, setHoverStyle] = useState({})
-  const [isHovering, setIsHovering] = useState(false)
+  const [hoverStyle, setHoverStyle]  = useState({})
+  const [isHovering, setIsHovering]  = useState(false)
   const tabRefs = useRef([])
 
-  const { label, Tabs } = useMemo(
+  const { label, Tabs, TabsInline, SubBar } = useMemo(
     () => ROUTE_CONFIG[pathname] ?? { label: 'Hypeify' },
     [pathname]
   )
@@ -42,8 +40,8 @@ export default function Topbar() {
     if (!activeEl) return
     const paddingX = parseFloat(getComputedStyle(activeEl).paddingLeft)
     setSliderStyle({
-      width: activeEl.offsetWidth - paddingX * 2 + 4,
-      left: activeEl.offsetLeft + paddingX - 1,
+      width: activeEl.offsetWidth - paddingX * 2 + 2,
+      left:  activeEl.offsetLeft  + paddingX     - 1,
     })
   }, [activeTab])
 
@@ -61,24 +59,31 @@ export default function Topbar() {
   }
 
   return (
-    <header className="f-col g18">
-      <p className="h-r-regular">{label}</p>
-      {Tabs && (
-        <div className="tabs-wrap b-s-regular f-row">
-          <div
-            className="slider-hover tra"
-            style={{ ...hoverStyle, opacity: isHovering ? 1 : 0 }}
-          />
-          <Tabs
-            activeTab={activeTab}
-            tabRefs={tabRefs}
-            onTabClick={handleClick}
-            onTabEnter={handleMouseEnter}
-            onTabLeave={() => setIsHovering(false)}
-          />
-          <div className="slider tra" style={sliderStyle} />
-        </div>
-      )}
-    </header>
+    <>
+      <header className="f-col g18">
+        <p className="h-m-medium">{label}</p>
+
+        {Tabs && (
+          <div className="tabs-wrap b-m-regular f-row">
+            <div
+              className="slider-hover tra"
+              style={{ ...hoverStyle, opacity: isHovering ? 1 : 0 }}
+            />
+            <Tabs
+              activeTab={activeTab}
+              tabRefs={tabRefs}
+              onTabClick={handleClick}
+              onTabEnter={handleMouseEnter}
+              onTabLeave={() => setIsHovering(false)}
+            />
+            <button className='tab hover settings'>Settings</button>
+            {TabsInline && <TabsInline />}
+            <div className="slider tra" style={sliderStyle} />
+          </div>
+        )}
+      </header>
+
+      {SubBar && <SubBar activeTab={activeTab} />}
+    </>
   )
 }

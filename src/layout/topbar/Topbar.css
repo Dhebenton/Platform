@@ -1,55 +1,62 @@
-/*   TOPBAR   */
-
 header {
-     padding: var(--g28) var(--g72);
+     padding: var(--g28) var(--padding-main);
 }
 
 /*   TABS   */
 
 header {
-     
      .tabs-wrap {
-          padding-bottom: var(--g10);
+          padding-bottom: var(--g9);
           border-bottom: 1px solid var(--stroke-primary);
           position: relative;
      }
 
-     .tabs-wrap .slider {
-          height: 2px;
-          border-radius: 50px;
+     .slider {
           position: absolute;
           bottom: -1px;
+          height: 2px;
           background-color: var(--label-black);
+          border-radius: 50px;
      }
 
-     .tabs-wrap .slider-hover {
-          position: absolute;
+     .slider-hover {
           top: 0;
+          bottom: var(--g9);
+          position: absolute;
           border-radius: var(--br6);
-          bottom: var(--g10);
           background-color: var(--background-hover);
      }
 
-     .tabs-wrap button:first-of-type {
-          margin-left: calc(var(--g12) * -1);
-     }
-
      .tab {
-          font-size: inherit;
-          font-variation-settings: inherit;
-          color: var(--label-quanternary);
-          letter-spacing: inherit;
-
-          position: relative;
-          padding: var(--g8) var(--g12);
+         padding: var(--g8) var(--g12); 
+         position: relative;
+         font-size: inherit;
+          border-radius: var(--br6);
+         font-variation-settings: inherit;
+         color: var(--label-quanternary);
+         letter-spacing: inherit;
      }
 
      .tab:hover {
-          color: var(--label-secondary);
+          color: var(--label-secondry);
      }
 
      .tab.active {
           color: var(--label-black);
-          font-variation-settings: var(--body-s-semibold);
+          font-variation-settings: var(--b-m-medium);
+     }
+
+     .tabs-wrap > button:first-of-type {
+          margin-left: calc(var(--g12) * -1);
+     }
+
+     /*   HOVER   */
+
+     .tab.hover:hover {
+          background-color: var(--background-hover);
+     }
+
+     .tab.settings {
+          margin-left: auto;
      }
 }

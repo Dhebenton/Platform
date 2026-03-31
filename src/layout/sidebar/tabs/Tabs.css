@@ -1,15 +1,26 @@
-/*  TABS   */
+nav .tab-group {
+     padding: var(--g10) ;
+     padding-top: var(--g18);
+}
 
 nav .tab {
-     color: var(--label-quanternary);
      display: grid;
-     height: 30px;
-     min-height: 30px;
-     padding: 0 var(--g10);
-     text-align: left;
-     align-items: center;
      grid-template-columns: 12.5px 1fr;
+     color: var(--label-quanternary);
+     padding: 0 var(--g10);
      border-radius: var(--br8);
+     align-items: center;
+     height: 29px;
+}
+
+nav p {
+     white-space: nowrap;
+     padding-top: 2px;
+}
+
+nav svg {
+     overflow: visible;
+     justify-self: center;
 }
 
 nav .tab svg.height {
@@ -19,38 +30,24 @@ nav .tab svg.height {
 }
 
 nav .tab svg.width {
+     min-width: 12.5px;
      width: 12.5px;
-     max-width: 12.5px;
      height: auto;
 }
+
+
+/*   HOVER   */
 
 nav .tab:hover {
      background-color: var(--background-hover);
      color: var(--label-secondary);
 }
 
+
+/*   ACTIVE   */
+
 nav .tab.active {
-     background-color: var(--background-active);
      color: var(--label-black);
-     font-variation-settings: var(--body-small-medium);
-}
-
-/*   SMALL   */
-
-nav .tab.small {
-     height: 28px;
-     border-radius: var(--br6);
-     min-height: 28px;
-}
-
-nav .tab.small svg.height {
-     height: 12px;
-     max-height: 12px;
-     width: auto;
-}
-
-nav .tab.small svg.width {
-     width: 12px;
-     max-width: 12px;
-     height: auto;
+     font-variation-settings: var(--b-s-medium);
+     background-color: var(--background-active);
 }
