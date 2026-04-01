@@ -1,17 +1,38 @@
+import { useEffect, useRef } from 'react'
 import './Message.css'
 
 export const UserMessage = ({ message }) => {
+     const ref = useRef(null)
+
+     useEffect(() => {
+          const el = ref.current
+          if (!el) return
+          el.classList.add('animate')
+          const timer = setTimeout(() => el.classList.remove('animate'), 220)
+          return () => clearTimeout(timer)
+     }, [])
+
      return (
           <div className="f-col a-f-e">
-               <p className="user-message">Why did my checkout speed drop yesterday?</p>
+               <p ref={ref} className="user-message">{message}</p>
           </div>
      )
 }
 
-export const MobinaMessageDefault = ({ message }) => {
+export const MobinaMessageLoading = () => {
      return (
           <div className="f-col a-f-s">
-               <p className="mobina-message">Checkout load time increased by 420ms after the 14:20 production deploy. A new client side validation script added blocking time on mobile. Stripe webhook retries increased server latency.</p>
+               <div className="mobina-message loading-dots">
+                    <span /><span /><span />
+               </div>
+          </div>
+     )
+}
+
+export const MobinaMessage = ({ message }) => {
+     return (
+          <div className="f-col a-f-s">
+               <p className="mobina-message">{message}</p>
           </div>
      )
 }

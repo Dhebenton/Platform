@@ -58,8 +58,10 @@ function App() {
       return null;
    }
      return (
+     <AppProvider session={session}>
           <Layout />
-     )
+     </AppProvider>
+)
 }
 
 export default App;

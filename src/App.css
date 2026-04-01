@@ -79,3 +79,11 @@ a {
      max-height: 100vh;
      overflow: none;
 }
+
+.a-f-e {
+     align-items: flex-end;
+}
+
+:root {
+     --g4: 4px;
+}
