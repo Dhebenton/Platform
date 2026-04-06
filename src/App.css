@@ -43,7 +43,7 @@ body {
      font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
      font-optical-sizing: auto;
      font-family: 'PPNeueMontreal';
-     background-color: white;
+     background-color: #FCFCFC;
      font-variant-ligatures: common-ligatures;
      font-synthesis: none;
 }

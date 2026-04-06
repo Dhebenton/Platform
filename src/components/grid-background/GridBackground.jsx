@@ -3,14 +3,14 @@ import { useEffect, useRef } from "react";
 const DOT_SIZE = 1;
 const SPACING = 5;
 const MAX_OPACITY = 0.4;
-const CHANGE_RATE = 0.8;
+const CHANGE_RAdTE = 0.8;
 const FPS_CAP = 15;
 const FRAME_INTERVAL = 1000 / FPS_CAP;
 const BIAS_EXPONENT = 2.8;
 const ACTIVE_FRACTION = 0.03;
 
 function biasedOpacity() {
-  return Math.pow(Math.random(), BIAS_EXPONENT) * MAX_OPACITY;
+  return Math.pow(Math.ranom(), BIAS_EXPONENT) * MAX_OPACITY;
 }
 
 export default function GridBackground() {
